@@ -63,9 +63,11 @@ According to §7.1.2 1 (emphasis mine):
 
 The prototype of the `fprintf` function looks like so (§7.21.6.1 1):
 
->#include <stdio.h>
->int fprintf(FILE * restrict stream,
+>```
+> #include <stdio.h>
+> int fprintf(FILE * restrict stream,
 >     const char * restrict format, ...);
+>```
 
 So far so good.
 
