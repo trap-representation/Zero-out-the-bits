@@ -53,7 +53,7 @@ Claim 3.
 
 Let's see what the C11 standard has to say about it.
 
-Footnote 92 of the C11 standard says that most often, the result of converting an identifier that is a function designator, yields the expression that denotes the called function. (I have tried to avoid using footnotes as reference throughout this text -- since they're only for information according to the C11 standard -- but I had to resort to one here, since I couldn't find a definition of what constitutes an "expression denoting the called function" anywhere else in the standard.)
+Footnote 92 of the C11 standard says that most often, the result of converting an identifier that is a function designator, yields the expression that denotes the called function. (I have tried to avoid using footnotes as reference throughout this text -- since they're only for information, according to the C11 standard -- but I had to resort to one here, because I couldn't find a definition of what constitutes an "expression denoting the called function" anywhere else in the standard.)
 
 So in, for example, `fprintf(stdout,"Hi there");`, the identifier `fprintf` is the function designator, which is the expression that denotes the called function. Great.
 
