@@ -13,6 +13,8 @@ Before I start though, I should mention that I will only talk about how such fal
 
 Each of the following paragraphs starts with a quote specifying the claim, followed by why said claim does not make any sense at all. In some cases, a quote from the C11 standard (yeah, not a huge fan of the direction C2x is headed) will be included for reference.
 
+---
+
 Claim 1.
 
 >Characters always use the ASCII character set
@@ -26,6 +28,8 @@ I think the aforementioned paragraph from the standard is pretty self-explanator
 I would like to add though, the C11 standard does indeed guarantee that UTF-8 string literals are encoded in UTF-8. From §6.4.5 6 of the C11 standard (emphasis mine):
 
 >[...] For UTF-8 string literals, the array elements have type char, and are initialized with the characters of the multibyte character sequence, as **encoded in UTF-8**. [...]"
+
+---
 
 Claim 2.
 
