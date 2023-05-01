@@ -3,7 +3,7 @@ You have been lied to
 
 Often times, I get recommended programming videos on YouTube where the guy teaching does not even have any idea whatsoever about what he's talking about.
 
-And what boils my blood more is that these YouTubers are getting around millions of views, meaning millions of people, who might possibly be newbies too, are actually watching these videos hopefully wanting to learn something, when all they're getting is a heck load of incorrect information.
+And what boils my blood more is that these YouTubers are getting around thousands, if not millions, of views, meaning millions of people, who might possibly be newbies too, are actually watching these videos hopefully wanting to learn something, when all they're getting is a heck load of incorrect information.
 
 Unfortunately though, some folks often justify it with a "You're getting this information for free" and stuff like that. In my opinion, if you're putting out information on the internet where thousands of people might see it, that information _should_ be correct, or at least you should put in some effort to make sure it is legitimate. And anyway, I consider this kind of act as a form of fraud. Sure, I'm not paying anything for it, but I'm wasting my time watching these worthless, good-for-nothing tutorials when these YouTubers are profitting off of spreading false information, which is unacceptable to me.
 
@@ -39,4 +39,4 @@ Now that we are 100% sure that sizeof yields the size of its operand in *bytes*,
 
 >The value of the result of both operators is **implementation-defined**, and its type (an unsigned integer type) is size_t, defined in <stddef.h> (and other headers).
 
-The words "Both operators" in the paragraph refers to the _Alignof and the sizeof operators. Again, I think the paragraph is pretty self-explanatory. So if you were one of those folks who used to believe that C mandates specific sizes for object of every type, because some random guy told you "Oh it is true in Turbo C++, so it must be true for every implementation", which it is not, you probably now know how stuff actually work.
+The words "Both operators" in the paragraph refer to the _Alignof and the sizeof operators. Again, I think the paragraph is pretty self-explanatory. So if you were one of those folks who used to believe that C mandates specific sizes for object of every type, because some random guy told you "Oh it is true in Turbo C++, so it must be true for every implementation", which it is not, you probably now know how stuff actually work.
