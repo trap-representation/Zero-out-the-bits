@@ -117,6 +117,6 @@ int *y=&x;
 fprintf(stdout,"%p",(void *)y);
 ```
 
-Yes, the conversion to a pointer to `void` is important, because the `p` conversion specifier expects a pointer to `void`. For any other type of argument (footnote 48 allows pointers to `void` and `char` types to be interchangeable as arguments to functions, return values functions, and members of union), the behavior would simply be undefined.
+Yes, the conversion to pointer to `void` is important, because the `p` conversion specifier expects a pointer to `void`. For any other type of argument (footnote 48 allows pointers to `void` and `char` types to be interchangeable as arguments to functions, return values from functions, and members of union), the behavior would simply be undefined.
 
 ---
