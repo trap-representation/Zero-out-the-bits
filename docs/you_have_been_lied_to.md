@@ -1,3 +1,6 @@
+You have been lied to
+---
+
 Often times, I get recommended programming videos on YouTube where the guy teaching does not even have any idea whatsoever about what he's talking about.
 
 And what boils my blood more is that these YouTubers are getting around millions of views, meaning millions of people, who might possibly be newbies too, are actually watching these videos hopefully wanting to learn something, when all they're getting is a heck load of incorrect information.
@@ -14,7 +17,7 @@ Claim 1.
 
 >Characters always use the ASCII character set
 
-They don't. The C11 standard does not mandate any representation for characters. §5.2.1 1 of the C11 specification has to say this (emphasis mine):
+They don't. The C11 standard does not mandate any specific values for members of the execution character set. §5.2.1 1 of the C11 specification has to say this (emphasis mine):
 
 >Two sets of characters and their associated collating sequences shall be defined: the set in which source files are written (the source character set), and the set interpreted in the execution environment (the execution character set). Each set is further divided into a basic character set, whose contents are given by this subclause, and a set of zero or more locale-specific members (which are not members of the basic character set) called extended characters. The combined set is also called the extended character set. **The values of the members of the execution character set are implementation-defined**.
 
