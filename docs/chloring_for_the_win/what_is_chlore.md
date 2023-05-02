@@ -3,7 +3,7 @@ What is Chlore
 
 Chlore is a stack-oriented language that puts simplicity and portability before anything.
 
-## Portability
+### Portability
 
 You ever program in your favorite programming language and wonder whether your program will run on that one graphing calculator you have lying around that's interally using a sign and magnitude representation for signed integers, has a 4-bit word length, and is being powered with potatoes?
 
@@ -19,7 +19,7 @@ It's not to say that such details should be entirely omitted or kept hidden from
 
 Chlore borrows this concept of defining an abstract machine that may or may not represent the actual execution environment a program is running on from how the C standards describe the semantics of the language. Chlore describes the _expected behavior_ of evaluating certain constructs, rather than how it shall be done.
 
-## Simplicity
+### Simplicity
 
 Simplicity (in context of programming languages), even though it often conveys different meaning to different people, Chlore measures it in terms of how simple it is to write an implementation of Chlore. Anything that might be complicated to define or needs a sophisticated mechanism to implement, is never added to the language. In fact, one of the very first implementations of Chlore I wrote (Ehre) is only ~6k lines of C code.
 
