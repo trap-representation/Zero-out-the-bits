@@ -1,3 +1,6 @@
+Chloring for the win
+---
+
 Welcome to Chloring for the win (CFTW) -- a beginner-friendly guide to using the Chlore programming language.
 
 Since there is no implementation of Chlore publicly available yet, you would not be able to try the examples out unless you write your own implementation, which again, would be impossible, since the specification of Chlore (which is still work-in-progress) isn't published either. But if you are curious about the language, hopefully CFTW will give you a feel of what the language is like.
