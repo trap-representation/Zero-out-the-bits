@@ -11,7 +11,7 @@ This text is about addressing such false claims that I've heard, not just on You
 
 Before I start though, I should mention that I will only talk about how such false information has butchered how some people write C code. From summoning nasal demons to literal UFOs -- these people can do all that sorcery you can ever imagine. All they need is a standard-conforming C implementation and they'll UB the hell out of it.
 
-Each of the following paragraphs starts with a quote specifying the claim, followed by why said claim does not make any sense at all. In some cases, a quote from the C11 standard (yeah, not a huge fan of the direction C2x is headed) will be included for reference.
+Each of the following paragraphs starts with a quote specifying the claim, followed by why said claim does not make any sense at all. In some cases, a quote from the C11 standard (yeah, not a huge fan of the direction C2x is headed) is included for reference.
 
 ---
 
@@ -25,7 +25,7 @@ They don't. The C11 standard does not mandate any specific values for members of
 
 I think the aforementioned paragraph from the standard is pretty self-explanatory. If only people weren't lazy enough to read the specification.
 
-I would like to add though, the C11 standard does indeed guarantee that UTF-8 string literals are encoded in UTF-8. From §6.4.5 6 of the C11 standard (emphasis mine):
+I would like to add though, the C11 standard does indeed guarantee that UTF-8 string literals are encoded in UTF-8. §6.4.5 6 of the C11 standard states (emphasis mine)
 
 >[...] For UTF-8 string literals, the array elements have type char, and are initialized with the characters of the multibyte character sequence, as **encoded in UTF-8**. [...]"
 
@@ -35,11 +35,11 @@ Claim 2.
 
 >Objects of type int always have a size of 4 bytes, objects of type long use 8 bytes, and so on.
 
-This is probably one of the most infamous examples of what happens when one does not have any knowledge about the language they're working with whatsoever. The sizes of objects of types other than character types are implementation-defined. I repeat IMPLEMENTATION-DEFINED. Sorry for the caps there. From §6.5.3.4 5 of the C11 standard (emphasis mine):
+This is probably one of the most infamous examples of what happens when one does not have any knowledge about the language they're working with whatsoever. The sizes of objects of types other than character types are implementation-defined. I repeat IMPLEMENTATION-DEFINED. Sorry for the caps there. §6.5.3.4 5 of the C11 standard says (emphasis mine)
 
 >The sizeof operator yields the size (**in bytes**) of its operand, which may be an expression or the parenthesized name of a type. The size is determined from the type of the operand. The result is an integer. [...]
 
-Now that we are 100% sure that sizeof yields the size of its operand in *bytes*, we can have a look at paragraph 5 of the same section (emphasis mine):
+Now that we are 100% sure that sizeof yields the size of its operand in *bytes*, we can have a look at paragraph 5 of the same section, which states (emphasis mine)
 
 >The value of the result of both operators is **implementation-defined**, and its type (an unsigned integer type) is size_t, defined in <stddef.h> (and other headers).
 
@@ -57,7 +57,7 @@ Footnote 92 of the C11 standard says that most often, the result of converting a
 
 So in, for example, `fprintf(stdout,"Hi there");`, the identifier `fprintf` is the function designator, which is the expression that denotes the called function. Great.
 
-According to §7.1.2 1 (emphasis mine):
+According to §7.1.2 1 (emphasis mine),
 
 >Each library function is declared, with a type that **includes a prototype**, in a header, whose contents are made available by the #include preprocessing directive. [...]
 
@@ -71,17 +71,17 @@ The prototype of the `fprintf` function looks like so (§7.21.6.1 1):
 
 So far so good.
 
-Now §6.5.2.2 7 states (emphasis mine):
+Now §6.5.2.2 7 states (emphasis mine)
 
 >If the expression that denotes the called function has a type that does include a prototype, the arguments are implicitly converted, as if by assignment, to the types of the corresponding parameters, taking the type of each parameter to be the unqualified version of its declared type. **The ellipsis notation in a function prototype declarator causes argument type conversion to stop after the last declared parameter. The default argument promotions are performed on trailing arguments**.
 
-This means that, for `fprintf`, starting from the third argument (if any), only the default argument promotions are performed. §6.5.2.2 6 describes the default argument promotions like this:
+This means that, for `fprintf`, starting from the third argument (if any), only the default argument promotions are performed. §6.5.2.2 6 describes the default argument promotions as the following:
 
 >[...] the integer promotions are performed on each argument, and arguments that have type float are promoted to double. These are called the default argument promotions. [...]
 
 So where's the problem you might ask.
 
-According to §7.21.6.1 9:
+According to §7.21.6.1 9,
 
 >[...] If any argument is not the correct type for the corresponding conversion specification, the behavior is undefined.
 
@@ -118,5 +118,25 @@ fprintf(stdout,"%p",(void *)y);
 ```
 
 Yes, the conversion to pointer to `void` is important, because the `p` conversion specifier expects a pointer to `void`. For any other type of argument (footnote 48 allows pointers to `void` and `char` types to be interchangeable as arguments to functions, return values from functions, and members of union), the behavior would simply be undefined.
+
+---
+
+Claim 4.
+
+>Dereferencing a null pointer always result in a segmentation fault.
+
+It need not. It may, but it need not.
+
+Once again, I had to resort to a footnote for this, because the standard does not define what constitutes an "invalid value" for a pointer that is going to be used with the indirection operator anywhere else.
+
+Anyway, footnote 102 presents a list of such "invalid values for dereferencing a pointer". Those include a null pointer, an address inappropriately aligned for the type of the object pointed to, and the address of an object after the end of its lifetime.
+
+And according to §6.5.3.2 4 (emphasis mine),
+
+>The unary \* operator denotes indirection. If the operand [...] **If an invalid value has been assigned to the pointer, the behavior of the unary \* operator is undefined**
+
+It is officially undefined behavior.
+
+So not only is your program allowed to result in a segmentation violation, it can very well be the cause of a zombie outbreak.
 
 ---
