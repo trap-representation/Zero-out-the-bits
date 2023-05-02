@@ -133,7 +133,7 @@ Anyway, footnote 102 presents a list of such "invalid values for dereferencing a
 
 And according to §6.5.3.2 4 (emphasis mine),
 
->The unary \* operator denotes indirection. If the operand [...] **If an invalid value has been assigned to the pointer, the behavior of the unary \* operator is undefined**
+>The unary \* operator denotes indirection. [...] **If an invalid value has been assigned to the pointer, the behavior of the unary \* operator is undefined**
 
 It is officially undefined behavior.
 
