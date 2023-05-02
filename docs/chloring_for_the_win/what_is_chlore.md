@@ -25,6 +25,6 @@ Simplicity (in context of programming languages), even though it often conveys d
 
 You will be able to learn more about Chlore's design -- especially what it expects from implementations and such -- in the next chapters.
 
-[Chloring for the win (prev)](./chloring_for_the_win.md)
-
 [Hello, World! (next)](./hello_world.md)
+
+[Chloring for the win (prev)](./chloring_for_the_win.md)
