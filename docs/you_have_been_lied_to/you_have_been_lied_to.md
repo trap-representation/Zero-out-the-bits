@@ -43,7 +43,7 @@ Now that we are 100% sure that sizeof yields the size of its operand in *bytes*,
 
 >The value of the result of both operators is **implementation-defined**, and its type (an unsigned integer type) is size_t, defined in <stddef.h> (and other headers).
 
-The words "Both operators" in the paragraph refer to the _Alignof and the sizeof operators. Again, I think the paragraph is pretty self-explanatory. So if you were one of those folks who used to believe that C mandates specific sizes for object of every type, because some random guy told you "Oh it is true in Turbo C++, so it must be true for every implementation", which it is not, you probably now know how stuff actually work.
+The words "Both operators" in the paragraph refer to the `_Alignof` and the `sizeof` operators. Again, I think the paragraph is pretty self-explanatory. So if you were one of those folks who used to believe that C mandates specific sizes for object of every type, because some random guy told you "Oh it is true in Turbo C++, so it must be true for every implementation", which it is not, you probably now know how stuff actually work.
 
 ---
 
@@ -138,5 +138,48 @@ And according to §6.5.3.2 4 (emphasis mine),
 It is officially undefined behavior.
 
 So not only is your program allowed to result in a segmentation violation, it can very well be the cause of a zombie outbreak.
+
+---
+
+Claim 5.
+
+>Any object can be reinterpreted by accessing it with an lvalue with the desired type.
+
+Let's take the following snippet an as example.
+
+```
+int x=42;
+int *y=&x;
+float fv=*(float *)y;
+printf("%f\n",fv);
+```
+
+It's already obvious that `float fv=*(float *)y` has undefined behavior, because for the access, `x` has an effective type of `int`
+
+(§6.5 6:
+
+>The effective type of an object for an access to its stored value is the declared type of the object, if any. [...]
+
+), and what we are trying to do is access the object with an _illegal_ lvalue expression, since §6.5 7 mandates
+
+>An object shall have its stored value accessed only by an lvalue expression that has one of the following types:
+>-- a type compatible with the effective of the object,
+>-- a qualified version of a type compatible with the effective type of the object,
+>-- a type that is the signed or unsigned type corresponding to the effective type of the object,
+>-- a type that is the signed or unsigned type corresponding to a qualified version of the effective type of the object,
+>-- an aggregate or union type that includes one of the aforementioned types among its members (include, recursively, a member of a subaggregate or contained union), or
+>-- a character type
+
+None of the requirements is satisfied, so a "shall" is violated. This means that our program officially has undefined behavior.
+
+There is one more thing that `float fv=*(float *)y` assumes that is not actually guaranteed by the C11 standard, which is the conversion of `y` to pointer to `float`.
+
+§6.3.2.3 7 states (emphasis mine)
+
+>A pointer to an object type may be converted to a pointer to a different object type. If the resulting pointer is not correctly aligned for the referenced type, the behavior is undefined. **Otherwise, when converted back again, the result shall compare equal to the original pointer**. [...]
+
+Even if the resulting pointer _is_ correctly aligned for the referenced type, the only guarantee that's ever provided is that when the converted pointer (pointer to `float`) is converted back again to a pointer to the original object type (pointer to `int`), it shall compare equal to the original pointer (meaning point to the same object). So assuming that after the conversion, the resulting pointer still points to `x`, is foolish to say the least.
+
+Now the entire concept of the converted pointer not pointing to the original object seems a bit iffy to me. Maybe the authors of the specification wanted to convey a different meaning through the paragraph. I don't know. I like to follow the standard to the letter, so I do not like to depend on this kind of ambiguous stuff.
 
 ---
