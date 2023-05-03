@@ -7,6 +7,6 @@ Zeroed out bits:
 
 Found any incorrect information in a zeroed out bit? Shoot me a mail at programmertotherescue@gmail.com.
 
-NOTE: All the content on this site is licensed under the Creative Commons Attribution-Noderivatives 4.0 International License.
+NOTE: All the content on this site is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.
 
 Copyright (c) 2023 Somdipto Chakraborty
