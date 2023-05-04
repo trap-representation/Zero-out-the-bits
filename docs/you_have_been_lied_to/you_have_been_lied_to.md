@@ -15,7 +15,7 @@ Each of the following paragraphs starts with a quote specifying the claim, follo
 
 ---
 
-Claim 1.
+### Claim 1
 
 >Characters always use the ASCII character set.
 
@@ -31,7 +31,7 @@ I would like to add though, the C11 standard does indeed guarantee that UTF-8 st
 
 ---
 
-Claim 2.
+### Claim 2
 
 >Objects of type int always have a size of 4 bytes, objects of type long use 8 bytes, and so on.
 
@@ -47,7 +47,7 @@ The words "Both operators" in the paragraph refer to the `_Alignof` and the `siz
 
 ---
 
-Claim 3.
+### Claim 3
 
 >Using the d or x conversion specifiers (with the fprintf and similar functions) for arguments of pointer type is legal.
 
@@ -121,7 +121,7 @@ Yes, the conversion to pointer to `void` is important, because the `p` conversio
 
 ---
 
-Claim 4.
+### Claim 4
 
 >Dereferencing a null pointer always result in a segmentation fault.
 
@@ -141,7 +141,7 @@ So not only is your program allowed to result in a segmentation violation, it ca
 
 ---
 
-Claim 5.
+### Claim 5
 
 >Any object can be reinterpreted by accessing it with an lvalue with the desired type.
 
