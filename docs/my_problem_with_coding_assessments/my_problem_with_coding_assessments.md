@@ -1,3 +1,6 @@
+My problem with coding assessments
+---
+
 Coding assessments mostly just suck. 90% of them are made by people who I would call are as far from being a language lawyer as one can get.
 
 What's the purpose of me writing about this topic, you might ask. Well, I recently had to take this test in my college -- a coding assessment on the C programming language, if you will. I think you know where this is going. The paper was so bad that it actually cured my imposter syndrome.
