@@ -119,7 +119,7 @@ To the next one.
 
 Oh boy, not this again. It literally has undefined behavior. I have no idea what they wanted me to choose for the answer.
 
-If you want to know why exactly this is undefined behavior, check out [Claim 3 of You have been lied to](../you_have_been_lied_to/you_have_been_lied_to.md). Needless to say, there is no "correct" option.
+If you want to know why exactly this is undefined behavior, check out [Claim 3 of You have been lied to](../you_have_been_lied_to/you_have_been_lied_to.md#claim-3). Needless to say, there is no "correct" option.
 
 Well, that'll have to do it for now, I'm afraid. I might add in a couple more in the future if I have time.
 
