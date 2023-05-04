@@ -5,9 +5,7 @@ Coding assessments mostly just suck. 90% of them are made by people who I would 
 
 What's the purpose of me writing about this topic, you might ask. Well, I recently had to take this test in my college -- a coding assessment on the C programming language, if you will. I think you know where this is going. The paper was so bad that it actually cured my imposter syndrome.
 
-This article is mostly going to be a rant about that paper.
-
-Without going into too much boring stuff, I'd start off with the thing you are actually here for -- the hilariously bad questions.
+Anyway, without going into too much boring stuff, I'd start off with the thing you are actually here for -- the hilariously bad questions.
 
 Starting with the absolute gem right here.
 
@@ -125,4 +123,4 @@ If you want to know why exactly this is undefined behavior, check out [Claim 3 o
 
 Well, that'll have to do it for now, I'm afraid. I might add in a couple more in the future if I have time.
 
-And if you like language lawyer stuff, be sure to give [You have been lied to](../you_have_been_lied_to/you_have_been_lied_to.md) a read, where I bust such claims as "characters are always represented using ASCII in C" and "`int` always use 4 bytes".
+And if you like language lawyer stuff, be sure to give [You have been lied to](../you_have_been_lied_to/you_have_been_lied_to.md) a read, where I bust such claims as "characters are always represented using ASCII in C", "`int` always use 4 bytes", and more only on Zero out the bits.
