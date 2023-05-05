@@ -43,7 +43,7 @@ Off to the second one.
 >c) hah eh  
 >d) eh
 
-Yeah, they thought they were pretty clever with this. The answer will be e: none of the given options, because the behavior of this program is implementation-defined. You could tell that whoever was in duty of writing the paper has no idea what they're doing when they literally talk about implementation details when it is not needed, and when it's need the most, they say "Eh, I don't give a heck".
+Yeah, they thought they were pretty clever with this. The behavior of this program is implementation-defined. You could tell that whoever was in duty of writing the paper has no idea what they're doing when they literally talk about implementation details when it is not needed, and when it's need the most, they say "Eh, I don't give a heck".
 
 The C11 standard does not mandate any specific value for members of the execution character set.
 
