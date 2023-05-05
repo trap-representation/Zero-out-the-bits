@@ -1,7 +1,7 @@
 You have been lied to
 ---
 
-Often times, I get recommended programming videos on YouTube where the guy teaching does not even have any idea whatsoever about what he's talking about.
+Often times, I get recommended programming videos on YouTube where the guy teaching does not even have any idea whatsoever what he's talking about.
 
 And what boils my blood more is that these YouTubers are getting around thousands, if not millions, of views, meaning millions of people, who might possibly be newbies too, are actually watching these videos hopefully wanting to learn something, when all they're getting is a heck load of incorrect information.
 
