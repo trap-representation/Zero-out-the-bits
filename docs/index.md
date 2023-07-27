@@ -6,7 +6,7 @@ Zeroed out bits:
 - [Chloring for the win](./chloring_for_the_win/chloring_for_the_win.md)
 - [My problem with coding assessments](./my_problem_with_coding_assessments/my_problem_with_coding_assessments.md)
 
-Found any incorrect information in a zeroed out bit? Shoot me a mail at programmertotherescue@gmail.com.
+Found any incorrect information in a zeroed out bit? Shoot me a mail at programmertotherescue AT gmail DOT com.
 
 NOTE: All the content on this site is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.
 
