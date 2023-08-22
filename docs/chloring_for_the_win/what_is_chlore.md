@@ -9,7 +9,7 @@ This is because most modern programming languages either don't have a standard (
 
 Now you might be asking "But trap-representation, what on earth do you mean by _poorly written_?".
 
-You see, not every little detail about the execution environment needs to be specified by the standard. For example, chances are the average programmer will never write a program that assumes the number of bits that constitute an object of type T, but once the language mandates that an object of type T must have p bits, there's no going back. An implementation of that language _has_ to behave as if such an object has exactly p bits -- nothing more, nothing less. While this may not sound too bad, in certain cases, it can result in huge performance hits if the execution environment cannot access an exact of p bits.
+You see, not every little detail about the execution environment needs to be specified by the standard. For example, chances are the average programmer will never write a program that assumes the number of bits that constitute an object of type T, but once the language mandates that an object of type T must have p bits, there's no going back. An implementation of that language _has_ to behave as if such an object has exactly p bits-- nothing more, nothing less. While this may not sound too bad, in certain cases, it can result in huge performance hits if the execution environment cannot access an exact of p bits.
 
 It's not to say that such details should be entirely omitted or kept hidden from the programmer though; rather these should be left for implementations to define. Any language that deviates from this philosophy is what I like to call _poorly written_.
 
