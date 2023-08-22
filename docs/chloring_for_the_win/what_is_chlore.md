@@ -1,8 +1,6 @@
 What is Chlore
 ---
 
-Chlore is a stack-oriented language that puts simplicity before anything.
-
 You ever program in your favorite programming language and wonder whether your program will run on that one graphing calculator you have laying around that's interally using a sign and magnitude representation for signed integers, has a 4-bit word length, and is being powered with potatoes?
 
 Well, for _most_ programming languages in use in the modern age (including that _one programming language that shall not be named_), the answer is a simple "No, it won't", unless you emulate most of the behavior the language mandates in software, which might be too expensive for some devices.
@@ -15,9 +13,9 @@ You see, not every little detail about the execution environment needs to be spe
 
 It's not to say that such details should be entirely omitted or kept hidden from the programmer though; rather these should be left for implementations to define. Any language that deviates from this philosophy is what I like to call _poorly written_.
 
-Simplicity (in context of programming languages), even though it often conveys different meaning to different people, Chlore measures it in terms of how simple it is to write an implementation of Chlore. Anything that might be complicated to define or needs a sophisticated mechanism to implement, is never added to the language. In fact, one of the very first implementations of Chlore I wrote (Ehre) is only ~6k lines of C code.
+Chlore also puts simplicity before anything. Simplicity (in context of programming languages), even though it often conveys different meaning to different people, Chlore measures it in terms of how simple it is to write an implementation of Chlore. Anything that might be complicated to define or needs a sophisticated mechanism to implement, is never added to the language. In fact, one of the very first implementations of Chlore I wrote (Ehre) is only ~6k lines of C code.
 
-You will be able to learn more about Chlore's design -- especially what it expects from implementations and such -- in the next chapters.
+You will be able to learn more about Chlore's design-- especially what it expects from implementations and such-- in the next chapters.
 
 [Hello, World! (next)](./hello_world.md)
 
