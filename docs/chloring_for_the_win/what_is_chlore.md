@@ -13,7 +13,7 @@ You see, not every little detail about the execution environment needs to be spe
 
 It's not to say that such details should be entirely omitted or kept hidden from the programmer though; rather these should be left for implementations to define. Any language that deviates from this philosophy is what I like to call _poorly written_.
 
-Chlore also puts simplicity before anything. Simplicity (in context of programming languages), even though it often conveys different meaning to different people, Chlore measures it in terms of how simple it is to write an implementation of Chlore. Anything that might be complicated to define or needs a sophisticated mechanism to implement, is never added to the language. In fact, one of the very first implementations of Chlore I wrote (Ehre) is only ~6k lines of C code.
+Chlore also puts simplicity before anything. Simplicity (in context of programming languages), even though it often conveys different meaning to different people, Chlore measures it in terms of how simple it is to write an implementation of Chlore. Anything that might be complicated to define or needs a sophisticated mechanism to implement, is never added to the language. In fact, one of the very first implementations of Chlore I wrote (Ehre) was only ~6k lines of C code.
 
 You will be able to learn more about Chlore's design-- especially what it expects from implementations and such-- in the next chapters.
 
