@@ -178,7 +178,7 @@ There is one more thing that `float fv=*(float *)y` assumes that is not actually
 
 >A pointer to an object type may be converted to a pointer to a different object type. If the resulting pointer is not correctly aligned for the referenced type, the behavior is undefined. **Otherwise, when converted back again, the result shall compare equal to the original pointer**. [...]
 
-Even if the resulting pointer _is_ correctly aligned for the referenced type, the only guarantee that's ever provided is that when the converted pointer (pointer to `float`) is converted back again to a pointer to the original object type (pointer to `int`), it shall compare equal to the original pointer (meaning point to the same object). So assuming that after the conversion, the resulting pointer still points to `x`, is foolish to say the least.
+Even if the resulting pointer _is_ correctly aligned for the referenced type, the only guarantee that's ever provided is that when the converted pointer (pointer to `float`) is converted back again to a pointer to the original object type (pointer to `int`), it shall compare equal to the original pointer (meaning point to the same object). So assuming that after the conversion, the resulting pointer still points to the original object, is foolish to say the least.
 
 Now the entire concept of the converted pointer not pointing to the original object seems a bit iffy to me. Maybe the authors of the specification wanted to convey a different meaning through the paragraph. I don't know. I like to follow the standard to the letter, so I do not like to depend on this kind of ambiguous stuff.
 
