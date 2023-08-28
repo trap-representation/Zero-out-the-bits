@@ -143,7 +143,7 @@ So not only is your program allowed to result in a segmentation violation, it ca
 
 ### Claim 5
 
->Any object can be reinterpreted by accessing it with an lvalue with the desired type.
+>Any object can be reinterpreted by accessing it with an lvalue expression with the desired type.
 
 Let's take the following snippet an as example.
 
@@ -154,7 +154,7 @@ float fv=*(float *)y;
 printf("%f\n",fv);
 ```
 
-It's already obvious that `float fv=*(float *)y` has undefined behavior, because for the access, `x` has an effective type of `int`
+It's already obvious that `float fv=*(float *)y` has undefined behavior, because the object pointed to by `y` has an effective type of `int`
 
 (§6.5 6:
 
