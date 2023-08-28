@@ -5,7 +5,7 @@ What is Chlore
 
 You ever program in your favorite programming language and wonder whether your program will run on that one graphing calculator you have laying around that's interally using a sign and magnitude representation for signed integers, has a 4-bit word length, and is being powered with potatoes?
 
-Well, for _most_ programming languages in use in the modern age (including that _one programming language that shall not be named_), the answer is a simple "No, it won't", unless you emulate most of the behavior the language mandates in software, which might be too expensive for some devices.
+Well, for _most_ programming languages in use in the modern age (including _that-one-programming-language-that-shall-not-be-named_), the answer is a simple "No, it won't", unless you emulate most of the behavior the language mandates in software, which might be too expensive for some devices.
 
 This is because most modern programming languages either aren't built with the goal of having a clearly defined language, or their specifications are so poorly written that they're not even worthy of being called one.
 
