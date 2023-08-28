@@ -143,7 +143,7 @@ So not only is your program allowed to result in a segmentation violation, it ca
 
 ### Claim 5
 
->Any object can be reinterpreted by accessing it with an lvalue expression with the desired type.
+>Any object can be reinterpreted by accessing it with an lvalue expression of the desired type.
 
 Let's take the following snippet an as example.
 
