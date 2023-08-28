@@ -154,7 +154,7 @@ float fv=*(float *)y;
 printf("%f\n",fv);
 ```
 
-It's already obvious that `float fv=*(float *)y` has undefined behavior, because the object pointed to by `y` has an effective type of `int`
+It's already obvious that `float fv=*(float *)y` has undefined behavior, because the object pointed to by `y` has an effective type of `int`.
 
 (§6.5 6:
 
