@@ -1,3 +1,3 @@
-Welcome to Zero out the bits -- a place where I write about computer stuff.
+Welcome to Zero out the bits.
 
-All the cool are stuff [here](https://trap-representation.github.io/Zero-out-the-bits/).
+Good things [here](https://trap-representation.github.io/Zero-out-the-bits/).
