@@ -135,7 +135,7 @@ Both of these programs have undefined behavior. They are trying to use arguments
 
 ]
 
-It has nothing to do with the "system". Modifying a `const`-qualified object is modified in any way, the behavior is undefined.
+It has nothing to do with the "system". If a `const`-qualified object is modified in any way, the behavior is undefined.
 
 ![15.png](15.png)
 
