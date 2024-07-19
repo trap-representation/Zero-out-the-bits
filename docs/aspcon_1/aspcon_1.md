@@ -195,7 +195,7 @@ They are very much different.
 
 ![20.png](20.png)
 
-We have switched to using `void main()` as the signature for `main` for some reason, which is incorrect.
+We have switched to using `void main()` as the signature for `main` for some reason, which is incorrect, at least for hosted implementations, which is what they are using.
 
 ![21.png](21.png)
 
