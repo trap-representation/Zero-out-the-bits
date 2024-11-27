@@ -1,9 +1,9 @@
 A self-taught programmer calls out nonsense: Part 1
 ---
 
-This post is about bullcrap claims by IIT Madras.
+This post is about incorrect claims by IIT Madras.
 
-Screenshots of the incorrect claims have been taken from http://www.cse.iitm.ac.in/~shwetaag/CS1100.html.
+Screenshots of the false claims have been taken from http://www.cse.iitm.ac.in/~shwetaag/CS1100.html.
 
 To prove my statements, I have also often included quotes from the C89 standard, because the way the programs have been written make it quite clear that they are meant to be conforming to said standard.
 
@@ -29,7 +29,7 @@ This is false as well. Not every program is required to have a `main`. Quoting Â
 
 ![2.png](2.png)
 
-This chart is entirely made-up. Everything presented in this chart as a fact is implementation-defined. Meaning, an implementation of the language is not required to adhere by whatever is there in this chart.
+This chart is entirely made-up. Everything presented in this chart as a fact is implementation-defined; meaning, an implementation of the language is not required to adhere by whatever is there in this chart.
 
 ![3.png](3.png)
 
