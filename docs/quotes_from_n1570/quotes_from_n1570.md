@@ -2,7 +2,7 @@ Quotes from n1570.
 
 # 5.1.1.2 Translation phases
 
-§5.1.1.2 states how a standard conforming C implementation shall translate an input. An implementation is not required to implement each stage as distinct, but is required to behave as if each of the following stages is being executed in the order specified.
+§5.1.1.2 states how a standard conforming C implementation shall translate an input. An implementation is not required to implement each stage as distinct, but must behave as if each of the following stages is being executed in the order specified.
 
 >The precedence among the syntax rules of translation is specified by the following phases.
 >1. Physical source file multibyte characters are mapped, in an implementation-defined manner, to the source character set (introducing new-line characters for end-of-line indicators) if necessary. Trigraph sequences are replaced by corresponding single-character internal representations.
