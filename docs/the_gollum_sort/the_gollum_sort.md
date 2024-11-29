@@ -1,4 +1,4 @@
-# The Gollum sorting algorithm
+# The Gollum sort algorithm
 
 For years, computer scientists have been trying to improve upon the existing sorting algorithms, but they have yet not succeeded in creating the fastest sorting algorithm; an algorithm to rule them all, an algorithm that can sort a list of items in constant time.
 
