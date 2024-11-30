@@ -80,12 +80,14 @@ This program has undefined behavior because during the evaluation of `ch != '\n'
 
 ]
 
-Both of these are false. The headers defined by the C standard only declares said functions; they never define them. Funny how they talk about definition vs declaration in a previous slide and blatantly make this error.
+Both of these are false. The headers defined by the C standard only declare said functions; they never define them. Funny how they talk about definition vs declaration in a previous slide and blatantly make this error.
 
 ![9.png](9.png)
 
 [
+
 > Prototype : Not provided.
+
 ]
 
 It is nonsense. For every call to `FindSum` in the program, `FindSum` does indeed act as a prototype. Quoting §3.7.1,
@@ -236,7 +238,9 @@ There is no "in general"; they ARE equivalent.
 ![23.png](23.png)
 
 [
+
 > However checking for equality or not equal of two structures is not supported by the language. S1 == S2 is syntax error.
+
 ]
 
 Incorrect. It has nothing to do with anything syntactic. It is a constraint violation, not a syntactic error.
