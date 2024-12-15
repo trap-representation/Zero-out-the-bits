@@ -110,7 +110,7 @@ The conversion to pointer to `void` is important, because the `p` conversion spe
 
 > Dereferencing a null pointer always result in a segmentation fault.
 
-It need not. It may, but it need not.
+It may, but it need not.
 
 Footnote 102 presents a list of invalid values for dereferencing a pointer. Those include a null pointer, an address inappropriately aligned for the type of the object pointed to, and the address of an object after the end of its lifetime.
 
