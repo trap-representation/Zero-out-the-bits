@@ -46,6 +46,9 @@ The C standard requires the number of bits in a byte to be _at least_ 8; this do
 > The values given below shall be replaced by constant expressions suitable for use in #if preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.
 > — number of bits for smallest object that is not a bit-field (byte)
 > CHAR_BIT    8
+> [...]
+
+---
 
 ### Claim 4
 
