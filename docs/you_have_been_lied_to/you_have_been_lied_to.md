@@ -5,27 +5,25 @@ Often times, I get recommended programming videos on YouTube where the guy teach
 
 And what is even more frustrating is that these YouTubers are getting around millions of views, meaning millions of people, who might possibly be new to the field, are watching these videos expecting to learn something, when all they're getting is a load of incorrect information.
 
-Unfortunately, some often justify it with a, "You're getting this information for free"; in my opinion, if one is putting out information on the internet promising people that they will become masters if they learn from the individual, that information should be correct, or at least there should be enough effort put in to make sure it is legitimate. Even though I am not paying to watch their videos, I am wasting my time watching these in the end of the day.
+Unfortunately, some often justify it with a, "You're getting this information for free"; in my opinion, if one is putting out information on the internet promising people that they will become masters if they learn from the individual, that information should be correct, or at least there should be enough effort put in to make sure it is legitimate. Even though I am not paying to watch their videos, I am wasting my time watching these at the end of the day.
 
-This text is about addressing such false claims that I've heard, not just on YouTube, but also, books, and professors of certain overhyped institutions.
+This text is about addressing such erroneous claims that I've heard, not just on YouTube, but also, books, and professors of certain overhyped institutions.
 
 Do note that I will only talk about how such false information has butchered the way people write C code.
 
 Each of the following paragraphs starts with a quote specifying the claim, followed by why said claim is not true. In some cases, a quote from the C11 standard is included for reference.
 
----
+### Erroneous claim 1
 
-### Claim 1
+> Characters are always encoded using the ASCII character set.
 
-> Characters always use the ASCII character set.
-
-They don't. The C11 standard does not mandate any specific values for members of the execution character set. §5.2.1 1 of the C11 specification has to say this:
+They aren't. The C11 standard does not mandate any specific values for members of the execution character set. §5.2.1 1 of the C11 specification has to say this:
 
 > Two sets of characters and their associated collating sequences shall be defined: the set in which source files are written (the source character set), and the set interpreted in the execution environment (the execution character set). Each set is further divided into a basic character set, whose contents are given by this subclause, and a set of zero or more locale-specific members (which are not members of the basic character set) called extended characters. The combined set is also called the extended character set. **The values of the members of the execution character set are implementation-defined**.
 
 ---
 
-### Claim 2
+### Erroneous claim 2
 
 > Objects of type int always have a size of 4 bytes, objects of type long use 8 bytes, and so on.
 
@@ -35,29 +33,29 @@ This is false. The sizes of objects of types other than character types are impl
 
 ---
 
-### Claim 3
+### Erroneous claim 3
 
 > Objects of type char always have exactly 8 bits.
 
-The C standard requires the number of bits in a byte to be _at least_ 8; this does not mean that an implementation is required to have `char`s with exactly 8 bits. It can have 9 bits or even 32 bits, nothing is preventing it from doing that.
+The C standard requires the number of bits in a byte to be _at least_ 8; this does not mean that an implementation is required to have `char`s with exactly 8 bits. It can have 9 bits or even 32 bits, nothing is preventing it from having that.
 
-§5.2.4.2.1 1
+§5.2.4.2.1 1:
 
-> The values given below shall be replaced by constant expressions suitable for use in #if preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.
-> — number of bits for smallest object that is not a bit-field (byte)
-> CHAR_BIT    8
+> The values given below shall be replaced by constant expressions suitable for use in #if preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.  
+> — number of bits for smallest object that is not a bit-field (byte)  
+> CHAR_BIT    8  
 > [...]
 
 ---
 
-### Claim 4
+### Erroneous claim 4
 
 > Using the d or x conversion specifiers (with the fprintf and similar functions) for arguments of pointer type is legal.
 
 The prototype of the `fprintf` function looks like so (§7.21.6.1 1):
 
 > ```
-> #include <stdio.h> 
+> #include <stdio.h>
 > int fprintf(FILE * restrict stream,
 >      const char * restrict format, ...);
 > ```
@@ -90,7 +88,7 @@ int *y = &x;
 fprintf(stdout, "%p", y);
 ```
 
-to launch a nuke, because §7.21.6.1 8 mandates,
+to summon [nasal demons](https://en.wiktionary.org/wiki/nasal_demon), because §7.21.6.1 8 mandates,
 
 > p    The argument shall be a **pointer to void**. [...]
 
@@ -106,7 +104,7 @@ The conversion to pointer to `void` is important, because the `p` conversion spe
 
 ---
 
-### Claim 5
+### Erroneous claim 5
 
 > Dereferencing a null pointer always result in a segmentation fault.
 
@@ -118,13 +116,11 @@ According to §6.5.3.2 4,
 
 > The unary \* operator denotes indirection. If the operand points to a function, the result is a function designator; if it points to an object, the result is an lvalue designating the object. If the  perand has type ‘‘pointer to type’’, the result has type ‘‘type’’. **If an invalid value has been assigned to the pointer, the behavior of the unary \* operator is undefined**.
 
-It is undefined behavior.
-
-So not only is the program allowed to result in a segmentation violation, it can very well be the cause of a zombie outbreak.
+It is undefined behavior. So not only is the program allowed to result in a segmentation violation, it can very well be the cause of a zombie outbreak.
 
 ---
 
-### Claim 6
+### Erroneous claim 6
 
 > Any object can be reinterpreted by accessing it with an lvalue expression of the desired type.
 
@@ -143,19 +139,19 @@ has undefined behavior because the object pointed to by `y` has an effective typ
 
 ), and what is being done here is the object is being accessed with an illegal lvalue expression, since §6.5 7 mandates,
 
-> An object shall have its stored value accessed only by an lvalue expression that has one of the following types:
-> -- a type compatible with the effective of the object,
-> -- a qualified version of a type compatible with the effective type of the object,
-> -- a type that is the signed or unsigned type corresponding to the effective type of the object,
-> -- a type that is the signed or unsigned type corresponding to a qualified version of the effective type of the object,
-> -- an aggregate or union type that includes one of the aforementioned types among its members (include, recursively, a member of a subaggregate or contained union), or
+> An object shall have its stored value accessed only by an lvalue expression that has one of the following types:  
+> -- a type compatible with the effective of the object,  
+> -- a qualified version of a type compatible with the effective type of the object,  
+> -- a type that is the signed or unsigned type corresponding to the effective type of the object,  
+> -- a type that is the signed or unsigned type corresponding to a qualified version of the effective type of the object,  
+> -- an aggregate or union type that includes one of the aforementioned types among its members (include, recursively, a member of a subaggregate or contained union), or  
 > -- a character type
 
-None of the requirements is satisfied, so a "shall" is violated. This means that the program has undefined behavior.
+None of the requirements is satisfied, so a "shall" is violated resulting in an undefined behavior.
 
 ---
 
-### Claim 7
+### Erroneous claim 7
 
 > ```
 > fseek(f, 0, SEEK_END);
@@ -172,7 +168,7 @@ It is not portable. A binary stream need not meaningfully support an `fseek` cal
 
 ---
 
-### Claim 8
+### Erroneous claim 8
 
 > The pointer returned by one of the memory management functions (malloc, aligned alloc, realloc, and calloc) can be converted to pointer to any object type.
 
@@ -188,7 +184,7 @@ Not all types are required to have a fundamental alignment, and if the pointer r
 
 ---
 
-### Claim 9
+### Erroneous claim 9
 
 > ```
 > unsigned short int x = 0;
@@ -220,3 +216,32 @@ The correct way to write it is to either cast `x` to `unsigned int` first, or as
 unsigned short int x = 0;
 unsigned int y = ~(x + 0u);
 ```
+
+---
+
+### Erroneous claim 10
+
+> Signed integer overflow always result in a wrap-around behavior.
+
+Not true. If the result is not in the range of the result type, the behavior is undefined.
+
+§6.5 5:
+
+> If an exceptional condition occurs during the evaluation of an expression (that is, if the result is not mathematically defined or not in the range of representable values for its type), the behavior is undefined.
+
+However, this particular concept has also led people to believe that something such as,
+
+```
+signed char a = 0xF00;
+```
+has undefined behavior if `signed char` for the particular implementation cannot represent `0xF00`. It does not. This is because §6.5.16.1 2 says,
+
+> In simple assignment (=), the value of the right operand is **converted to the type of the assignment expression** and replaces the value stored in the object designated by the left operand.
+
+and §6.3.1.3 states,
+
+> 1    When a value with integer type is converted to another integer type other than _Bool, if the value can be represented by the new type, it is unchanged.  
+> 2    Otherwise, if the new type is unsigned, the value is converted by repeatedly adding or subtracting one more than the maximum value that can be represented in the new type until the value is in the range of the new type.  
+> 3    **Otherwise, the new type is signed and the value cannot be represented in it; either the result is implementation-defined or an implementation-defined signal is raised**.
+
+---
